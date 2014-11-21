@@ -1,16 +1,15 @@
 <?php
  
-$a = 100;
+$a = 2;
 
 do {
     
     echo "$a\n";
     
-    $a -= 5;
+    $a *= $a;
 
-} while ($a >= -10);
+} while ($a < 1000000);
 
-//REMEMBER WHAT YOU DID! 
-//First I put "+= 5" which is WRONG
-//needed to put "-= 5" in order to make it "* -5"
-//then fixed "while" from "$a <= -10" to "$a >= -10" which works
+//REMEMBER WHAT YOU DID!
+//This time put $a += $a SHOULD HAVE PUT $a *= $a!
+//LEARN HOW TO WRITE  +=  -=  *=  /=  %=
