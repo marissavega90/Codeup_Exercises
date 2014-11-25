@@ -27,10 +27,9 @@ foreach ($books as $key => $book){
     
     echo "Title: $key\n";
     
-    echo "Published: {$book['published']}\n";
-    
-    echo "Author: {$book['author']}\n";
-    
-    echo "Pages: {$book['pages']}\n\n";
-    
+    foreach ($book as $key2 => $value) {
+        echo "$key2: $value\n";
+
+    }
+    echo PHP_EOL;
 }
