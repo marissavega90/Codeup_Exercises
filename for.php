@@ -11,10 +11,16 @@ if ($endnum = trim(fgets(STDIN))) {
     echo "Ending number is $endnum \n";
 }
 
-echo "The numbers you have chosen are: \n";
+echo "Count by what increment? \n";
 
-for ($number = $startnum; $number <= $endnum; $number++) {
+if ($increment = trim(fgets(STDIN))) {
+    echo "Increment is: $increment\n";
+    echo "The numbers you have chosen are: \n";
 
-    echo "{$number}\n";
-    
+    for ($i = $startnum; $i <= $endnum; $i += $increment) {
+
+        echo "$i\n";
+
+    }
 }
+
