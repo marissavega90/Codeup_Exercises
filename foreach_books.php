@@ -23,13 +23,14 @@ $books = array(
     )
 );
 
-foreach ($books as $key => $book){
+foreach ($books as $title => $info){
     
-    echo "Title: $key\n";
-    
-    foreach ($book as $key2 => $value) {
-        echo "$key2: $value\n";
-
-    }
-    echo PHP_EOL;
+        if ($info ['published'] > 1950) {
+        
+            echo "Title: $title\n";
+            echo "Published: {$info['published']}\n";
+            echo "Author: {$info['author']}\n";
+            echo "Pages: {$info['pages']}\n\n";
+        }
 }
+
