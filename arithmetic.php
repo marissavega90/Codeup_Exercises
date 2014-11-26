@@ -1,33 +1,59 @@
 <?php
 
+fwrite(STDOUT, 'Input default values: ');
+$num1 = trim(fgets(STDIN));
+$num2 = trim(fgets(STDIN));
+
 function add($a, $b) {
-    echo $a + $b . PHP_EOL;
+    if (is_numeric($a) && is_numeric($b)) {
+        echo $a + $b . PHP_EOL;
+    } else {
+        echo "ERROR!: Both arguments must be numbers!\n";
+    }
 }
 
-add(4, 3);
+add($num1, $num2);
 
 function subtract($a, $b) {
-    echo $a - $b . PHP_EOL;
+    if (is_numeric($a) && is_numeric($b)) {
+        echo $a - $b . PHP_EOL;
+    } else {
+        echo "ERROR!: Both arguments must be numbers!\n";
+    }
 }
 
-subtract(30, 21);
+subtract($num1, $num2);
 
 function multiply($a, $b) {
-    echo $a * $b . PHP_EOL;
+    if (is_numeric($a) && is_numeric($b)) {
+        echo $a * $b . PHP_EOL;
+    } else {
+        echo "ERROR!: Both arguments must be numbers!\n";
+    }
 }
 
-multiply(5, 5);
+multiply($num1, $num2);
 
 function divide($a, $b) {
-    echo $a / $b . PHP_EOL;
+    if (is_numeric($a) && is_numeric($b)) {
+        echo $a / $b . PHP_EOL;
+    } else {
+        echo "ERROR!: Both arguments must be numbers!\n";
+    }
 }
 
-divide(12, 3);
+divide($num1, $num2);
 
 function modulus($a, $b) {
-    echo $a % $b . PHP_EOL;
+    if (is_numeric($a) && is_numeric($b)) {
+        echo $a % $b . PHP_EOL;
+    } else {
+        echo "ERROR!: Both arguments must be numbers!\n";
+    }
 }
 
-modulus(36, 7);
+modulus($num1, $num2);
+
+
 
 ?>
