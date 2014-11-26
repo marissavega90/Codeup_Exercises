@@ -24,4 +24,10 @@ function divide($a, $b) {
 
 divide(12, 3);
 
+function modulus($a, $b) {
+    echo $a % $b . PHP_EOL;
+}
+
+modulus(36, 7);
+
 ?>
