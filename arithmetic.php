@@ -17,11 +17,11 @@ function add($a, $b) {
         echo var_dump($a, $b);
 
     } else {
-        echo $a + $b . PHP_EOL;
+        return $a + $b . PHP_EOL;
     }
 }
 
-add($num1, $num2);
+echo add($num1, $num2);
 
 
 function subtract($a, $b) {
@@ -31,11 +31,11 @@ function subtract($a, $b) {
         echo var_dump($a, $b);
 
     } else {
-        echo $a - $b . PHP_EOL;
+        return $a - $b . PHP_EOL;
     }
 }
 
-subtract($num1, $num2);
+echo subtract($num1, $num2);
 
 
 function multiply($a, $b) {
@@ -43,11 +43,11 @@ function multiply($a, $b) {
         errorMsg();
         echo var_dump($a, $b);
     } else {
-        echo $a * $b . PHP_EOL;
+        return $a * $b . PHP_EOL;
     }
 }
 
-multiply($num1, $num2);
+echo multiply($num1, $num2);
 
 
 function divide($a, $b) {
@@ -59,11 +59,11 @@ function divide($a, $b) {
     } elseif ($a == 0 || $b == 0) {
         echo "ERROR!: Cannot divide by zero!\n"; 
     } else {
-        echo $a / $b . PHP_EOL;
+        return $a / $b . PHP_EOL;
     }
 }
 
-divide($num1, $num2);
+echo divide($num1, $num2);
 
 
 function modulus($a, $b) {
@@ -75,10 +75,11 @@ function modulus($a, $b) {
         echo "ERROR!: Cannot divide by zero!\n";
 
     } else {
-        echo $a % $b . PHP_EOL;
+        return $a % $b . PHP_EOL;
     }
+
 }
-modulus($num1, $num2);
+echo modulus($num1, $num2);
 
 
 
