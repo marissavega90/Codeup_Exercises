@@ -5,8 +5,10 @@ $num1 = trim(fgets(STDIN));
 $num2 = trim(fgets(STDIN));
 
 function add($a, $b) {
+
     if (is_numeric($a) && is_numeric($b)) {
         echo $a + $b . PHP_EOL;
+
     } else {
         echo "ERROR!: Both arguments must be numbers!\n";
     }
@@ -15,8 +17,10 @@ function add($a, $b) {
 add($num1, $num2);
 
 function subtract($a, $b) {
+
     if (is_numeric($a) && is_numeric($b)) {
         echo $a - $b . PHP_EOL;
+        
     } else {
         echo "ERROR!: Both arguments must be numbers!\n";
     }
@@ -35,18 +39,27 @@ function multiply($a, $b) {
 multiply($num1, $num2);
 
 function divide($a, $b) {
-    if (is_numeric($a) && is_numeric($b)) {
+    if ($a == 0 || $b == 0) {
+        echo "ERROR!: Cannot divide by zero!\n"; 
+
+    } elseif (is_numeric($a) && is_numeric($b)) {
         echo $a / $b . PHP_EOL;
+
     } else {
         echo "ERROR!: Both arguments must be numbers!\n";
     }
 }
 
+
 divide($num1, $num2);
 
 function modulus($a, $b) {
-    if (is_numeric($a) && is_numeric($b)) {
+    if ($a == 0 || $b == 0) {
+        echo "ERROR!: Cannot divide by zero!\n";
+
+    } elseif (is_numeric($a) && is_numeric($b)) {
         echo $a % $b . PHP_EOL;
+
     } else {
         echo "ERROR!: Both arguments must be numbers!\n";
     }
