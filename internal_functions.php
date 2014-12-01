@@ -22,14 +22,16 @@ function is_nothing_empty($nothing) {
 
 function is_something_set($something) {
 // TEST: If var $something is set, display '$something is SET'
-    if (empty($something)) {
-        return  "\$something is EMPTY" . PHP_EOL;
+    if (isset($something)) {
+        return  "\$something is SET" . PHP_EOL;
     }
 } 
 
-echo is_nothing_set(null) . PHP_EOL;  
-echo is_nothing_empty(null) . PHP_EOL;
-echo is_something_set('') . PHP_EOL; 
+unset($something);
+
+echo is_nothing_set($nothing) . PHP_EOL;  
+echo is_nothing_empty($nothing) . PHP_EOL;
+echo is_something_set($something) . PHP_EOL; 
 
 
 // Serialize the array $array, and output the results
@@ -47,7 +49,7 @@ var_dump(unserialize($serialize));
 
 
 
-// 5. unset SOMETHING
+// 5. unset SOMETHING 
 
 
 
