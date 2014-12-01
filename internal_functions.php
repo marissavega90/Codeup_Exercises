@@ -43,17 +43,16 @@ var_dump(unserialize($serialize));
 
 
 
+//Isaac's code:
+
+// function check_variable($variable) {
+//     if(isset($variable)) {
+//         return 'the variable is set';
+//     } else {
+//         return 'the variable is null';
+//     }
+// }
 
 
-
-
-
-
-// 5. unset SOMETHING 
-
-
-
-
-
-
-
+// echo '$nothing ' . check_variable($nothing) . PHP_EOL;
+// echo '$something ' . check_variable($something) . PHP_EOL;
