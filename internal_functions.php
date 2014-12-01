@@ -22,8 +22,8 @@ function is_nothing_empty($nothing) {
 
 function is_something_set($something) {
 // TEST: If var $something is set, display '$something is SET'
-    if (isset($something)) {
-        return  "\$something is SET" . PHP_EOL;
+    if (empty($something)) {
+        return  "\$something is EMPTY" . PHP_EOL;
     }
 } 
 
