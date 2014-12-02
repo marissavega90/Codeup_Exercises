@@ -8,28 +8,45 @@
 
  // Create a function that returns TRUE or FALSE if an array value is found
 
- function search($names) {
-    
-    // Search through the array to see where Tina is
-    $result1 = array_search('Tina', $names);
+ function name($name, $array) {
+     
+     $result = array_search($name, $array);
 
-    // If Tina is found, echo TRUE
-    if ($result1 >= 0) {
-        echo "TRUE" . PHP_EOL;
-    } else {
-        echo "FALSE" . PHP_EOL;
-    }
-
-    $result2 = array_search('Bob', $names);
-
-    if ($result2) {
-        echo " TRUE" . PHP_EOL;
-    } else {
-        echo " FALSE" . PHP_EOL;
-    }
-
+     if ($result === false) {
+        return 'FALSE';
+     } else {
+        return 'TRUE';
+     }
  }
 
- $results = search($names);
+$nameToSearch = 'Tina';
+$arrayToSearch = $names;
 
- echo $results;
+echo name($nameToSearch, $arrayToSearch) . PHP_EOL;
+
+
+$nameToSearch = 'Bob';
+$arrayToSearch = $names;
+
+echo name($nameToSearch, $arrayToSearch) . PHP_EOL;
+
+
+// Create a function that compares two different arrays
+
+
+function compareArrays($names, $compare) {
+    
+    $count = 0;
+
+    foreach ($names as $name) {
+
+        if (array_search($name, $compare) !== false) {
+            $count++;
+        }
+    }
+
+    return $count;
+}
+
+echo "The number of common values is:" . compareArrays($names, $compare) . PHP_EOL;
+
